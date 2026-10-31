@@ -45,7 +45,7 @@ export default function App() {
     <div className="app">
       <header className="hero">
         <h1>
-          Love <span className="heart">Bombing</span>
+          Riz<span className="heart">Wit</span>
         </h1>
         <p className="tag">
           Your witty wingmate. Say the right thing — in your own voice, with the context that matters.
@@ -89,7 +89,7 @@ export default function App() {
 
       <footer className="foot">
         <p>
-          Love Bombing is a drafting aid — it helps you sound like your best self, not someone
+          RizWit is a drafting aid — it helps you sound like your best self, not someone
           else. Be genuine, be kind, and respect a no. 💛
         </p>
       </footer>

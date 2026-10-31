@@ -52,6 +52,6 @@ if (fs.existsSync(clientDist)) {
 }
 
 app.listen(PORT, () => {
-  console.log(`💘 Love Bombing server on http://localhost:${PORT}`);
+  console.log(`💘 RizWit server on http://localhost:${PORT}`);
   console.log(`   Engine: ${hasApiKey() ? 'Claude (live)' : 'demo (no ANTHROPIC_API_KEY set)'}`);
 });

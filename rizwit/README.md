@@ -1,16 +1,16 @@
-# 💘 Love Bombing
+# 💘 RizWit
 
 > Your witty texting wingmate. Say the right thing to someone you're into — in
 > **your own voice**, with humor, and using the context of your actual
 > conversation.
 
-Love Bombing helps guys and girls communicate with a romantic interest. You
+RizWit helps guys and girls communicate with a romantic interest. You
 tell it what you're going for (open a chat, reply, revive a dead thread, ask
 them out, make up after a fight…), paste the conversation so far, optionally
 drop in a few of your own texts so it matches your voice, and it drafts a few
 send-ready options — each with a different angle and a note on why it works.
 
-> **A note on the name:** this is a *drafting aid* to help you sound like your
+> **The ethos:** RizWit is a *drafting aid* to help you sound like your
 > best self. It is deliberately **not** a manipulation tool — it won't coach
 > pressure, deception, surveillance, or ignoring a "no". Be genuine and kind.
 
@@ -32,7 +32,7 @@ send-ready options — each with a different angle and a note on why it works.
 ## Quick start
 
 ```bash
-cd love-bombing
+cd rizwit
 
 # 1. Install server + client deps
 npm run install:all
@@ -72,7 +72,7 @@ Set these in `server/.env` (see `server/env.sample`):
 ## Project layout
 
 ```
-love-bombing/
+rizwit/
 ├── server/            # Express API + AI engine
 │   ├── index.js
 │   └── lib/
