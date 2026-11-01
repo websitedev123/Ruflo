@@ -69,6 +69,27 @@ Set these in `server/.env` (see `server/env.sample`):
 - `GET /api/health` — `{ ok: true }`.
 - `POST /api/generate` — body: `{ goal, stage, spice, tones[], conversation, voiceSample, themAbout, youAbout, count }` → `{ engine, model, suggestions: [{ text, angle, why }] }`.
 
+## Deploy to Railway
+
+RizWit ships with a [`railway.json`](./railway.json) blueprint. One service builds
+the client and runs the Express server, which serves both the API and the built UI.
+
+1. Push this repo to GitHub (already done if you're reading this on the remote).
+2. In [Railway](https://railway.app): **New Project → Deploy from GitHub repo**, and
+   pick this repository.
+3. Open the service's **Settings** and set **Root Directory** to `rizwit`
+   (the app lives in a subfolder of the repo). Railway then reads `rizwit/railway.json`.
+4. _(Optional, for the smart engine)_ In **Variables**, add:
+   - `ANTHROPIC_API_KEY` = your key (`sk-ant-...`). Without it, the app still runs in demo mode.
+   - `ANTHROPIC_MODEL` = `claude-opus-5-5` (or `claude-sonnet-5-5` / `claude-haiku-5-5` for cheaper/faster).
+   - You do **not** need to set `PORT` — Railway injects it and the server reads it automatically.
+5. Deploy. Railway runs `npm install --include=dev && npm run build`, then `npm start`,
+   and health-checks `/api/health`.
+6. Under **Settings → Networking**, click **Generate Domain** to get your public URL.
+
+> Prefer the CLI? `npm i -g @railway/cli`, then from `rizwit/`: `railway login`,
+> `railway init`, `railway up`. Set variables with `railway variables --set ANTHROPIC_API_KEY=...`.
+
 ## Project layout
 
 ```
